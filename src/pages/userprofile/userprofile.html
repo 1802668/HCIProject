@@ -1,0 +1,40 @@
+<header [title]="'User Profile'"></header>
+<ion-header>
+    <ion-navbar>
+        <ion-title>Profile</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+
+    <ng-container>
+        <form (ngSubmit)="logForm()">
+
+            <ion-item class="top">
+                <ion-label>Name</ion-label>
+                <ion-input type="text" [(ngModel)]="name" name="name"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Gender</ion-label>
+                <ion-select placeholder="Select One" [(ngModel)]="gender" name="gender">
+                    <ion-option value="Female">Female</ion-option>
+                    <ion-option value="Male">Male</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label>Age</ion-label>
+                <ion-input type="text" [(ngModel)]="age" name="age"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Height(cm)</ion-label>`
+                <ion-input type="text" [(ngModel)]="height" name="height"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Weight(kg)</ion-label>
+                <ion-input type="text" [(ngModel)]="weight" name="weight"></ion-input>
+            </ion-item>
+
+            <button ion-button type="submit" block>Update</button>
+        </form>
+    </ng-container>
+
+</ion-content>

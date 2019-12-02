@@ -1,9 +1,17 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      About
-    </ion-title>
-  </ion-navbar>
+<ion-header class="color">
+    <ion-navbar>
+      <ion-title>Food log</ion-title>
+         <!-- <ion-buttons end>
+           <button ion-button icon-only (click)="addNewEntry()">
+             <ion-icon name="add"></ion-icon>
+           </button>
+         </ion-buttons> -->
+       </ion-navbar>
+
+       <ion-toolbar>
+           <ion-searchbar [(ngModel)]="autocomplete" placeholder="Search for food" (ionInput)="getSearchedInput()" debounce=1 (ionClear)="resetView()"></ion-searchbar>
+       </ion-toolbar>
+
 </ion-header>
 
 <ion-content padding>
